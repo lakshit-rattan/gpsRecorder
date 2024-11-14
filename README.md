@@ -1,79 +1,39 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native GPS Recorder Assignment
 
-# Getting Started
+## Features
+- **Add Location Coordinate:** Tap the FAB to add the current GPS coordinates (latitude and longitude) to the list.
+- **Delete Location Coordinate:** Remove any coordinate from the list using the associated delete button.
+- **Offline Handling:** Recorded coordinates are saved locally, so they persist even after closing the app.
+- **Bonus Feature:** Tapping a coordinate opens a popup showing the corresponding address.
+- **Best Practices:** Care has been taken in updating and refining the file structure, along with type safeties in order to use all the best practices that I am aware of. The application is fully working and compatible with android & iOS devices.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Stack
+- **Framework:** React Native (v0.76.1)
+- **State Management:** Redux Toolkit
+- **Navigation:** React Navigation
+- **Storage:** @react-native-communityAsyncStorage
+- **Geolocation:** @react-native-community/geolocation
+- **Maps:** react-native-maps
 
-## Step 1: Start the Metro Server
-
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
-
-```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
+## Installation
+Requirements: -> Node v20
 
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+git clone https://github.com/lakshit-rattan/gpsRecorder.git
+cd gpsRecorder
 ```
 
-### For iOS
+- Step 1 : run npm install
+- Step 2 (Optional) : Put your Google Maps API key in App.tsx line 13 if you want to access the Bonus Feature of seeing the coordinates on google maps on pressing them.
+- Step 3 : run 'npm start --reset-cache'
+- Step 4 : enter 'a' after metro runs for android (ensure emulator/device is connected via 'adb devices') and 'i' for iOS (ensure apple simulator opened)
+- Step 5 : App tested working for iOS on XCode 16.1 & Android Studio Ladybug 2024.2.1 for android
 
-```bash
-# using npm
-npm run ios
 
-# OR using Yarn
-yarn ios
-```
+## Usage
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- Launch the app. Allow app to use location, and the initial screen will display a floating action button (FAB).
+- Tap the FAB to add your current GPS coordinates to the list.
+- View the list of coordinates displayed as a simple list.
+- Use the delete button next to any coordinate to remove it from the list.
+- (Bonus) - Tap on a coordinate to see its corresponding address. (Only if step 2 is completed)
